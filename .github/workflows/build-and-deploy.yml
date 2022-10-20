@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 name: Node.js CI
 
 on:
@@ -32,38 +31,3 @@ jobs:
         with:
           branch: gh-pages
           folder: out
-=======
-name: Node.js CI
-
-on:
-  push:
-    branches: [ main ]
-
-jobs:
-  build-and-deploy:
-
-    runs-on: ubuntu-latest
-    
-    steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v3
-      - name: Use Node.js 16
-        uses: actions/setup-node@v3
-        with:
-          # update the Node version to meet your needs
-          node-version: 16
-          cache: npm
-
-      - name: Install and Build 🔧
-        run: |
-          npm ci
-          npm run build
-          npm run export
-          touch out/.nojekyll
-      - name: Deploy 🚀
-         # https://github.com/JamesIves/github-pages-deploy-action
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages
-          folder: out
->>>>>>> cb925873706c28668a8ce62b07194088efda83a4
