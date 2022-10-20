@@ -4,7 +4,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export": "next export"
+    "export": "next export",
+    "deploy": "gh-pages -b main -d build"
   },
   "dependencies": {
     "@heroicons/react": "^1.0.6",
