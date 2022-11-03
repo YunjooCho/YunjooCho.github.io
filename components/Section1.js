@@ -1,12 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Author from './_child/Author';
-import type { NextPage } from 'next';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, {Autoplay} from 'swiper';
 import 'swiper/css';
 
-const Section1: NextPage = () => {
+export default function Section1() {
 
     SwiperCore.use([Autoplay])
 
@@ -60,5 +59,3 @@ function Slide() {
         </div>
     );
 }
-
-export default Section1
