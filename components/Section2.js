@@ -28,6 +28,9 @@ export default function Section2() {
 
 function Post({ data }) {
     const {id, category, img, published, author} = data;
+
+    console.log(data);
+
     return (
         <div className="item">
             <div className="image">
