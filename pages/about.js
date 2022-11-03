@@ -1,7 +1,7 @@
-import type { NextPage } from 'next'
+
 import Format from '../layout/format'
 
-const About: NextPage = () => {
+export default function About( { children }){
     return (
         <Format className="collapse collapse-open border border-base-300 bg-base-100 rounded-box">
             <div className="collapse-title text-xl font-medium">
@@ -42,5 +42,3 @@ const About: NextPage = () => {
         </Format>
     );
 }
-
-export default About

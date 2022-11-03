@@ -1,11 +1,11 @@
-import type { NextPage } from 'next'
+
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import Head from "next/head"
 
 import NavBar from '../components/NavBar'
 
-const Format: NextPage = ({ children }) => { //{ children }
+export default function format( { children }){
     return (
         <>
             <Head>
@@ -18,5 +18,3 @@ const Format: NextPage = ({ children }) => { //{ children }
         </>
     );
 }
-
-export default Format
