@@ -1,4 +1,10 @@
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+
 export default function NavBar() {
+
+    const router = useRouter();
+
     return (
         <div className="navbar bg-base-100">
             <div className="navbar-start">
@@ -24,10 +30,14 @@ export default function NavBar() {
                         className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
                     >
                         <li>
-                            <a href="/">Home</a> 
+                            <Link href="/">
+                                <a>Home</a>
+                            </Link> 
                         </li>
                         <li>
-                            <a href="/about">About</a>
+                            <Link href="/about">
+                                <a>About</a>
+                            </Link> 
                         </li>
                         {/* <li>
                             <a href="/language">Language</a>
@@ -42,7 +52,7 @@ export default function NavBar() {
                 </div>
             </div>
             <div className="navbar-center">
-                <a className="btn btn-ghost normal-case text-xl">Cholog</a>
+                <Link href={"/"}><a className="btn btn-ghost normal-case text-xl">Cholog</a></Link>
             </div>
             <div className="navbar-end">
                 <button className="btn btn-ghost btn-circle">
